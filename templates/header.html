@@ -1,0 +1,40 @@
+<html>
+<head>
+    
+
+    <link rel="stylesheet" type ="text/css" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+    <header>
+        <div>
+            <div id="header-div-left">
+                <img id="img-logo" src="/static/shield-icon-black.svg" alt="Harley Davidson">
+                <h1>Harley Davidson</h1>
+                <a id="cart-icon" style="margin-left: auto; cursor: pointer;">
+                    <img id="img-cart" src="/static/cart.svg" alt="Cart">
+                    <span id="cart-count" class="cart-count">0</span> <!-- Cart count indicator -->
+                </a>
+            </div>
+        </div>
+    </header>
+
+<!-- Cart Modal -->
+<div id="cartModal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span class="close">&times;</span>
+        <h2 class = "cart-h2">Your Cart</h2>
+        <div id="cartItems">
+            <!-- Cart items will be dynamically injected here -->
+        </div>
+        <div class="cart-actions">
+            <button id="clearCartBtn" class="action-button">Clear Cart</button>
+            <button id="checkoutBtn" class="action-button">Proceed to Checkout</button>
+        </div>
+    </div>
+</div>
+
+<script src="/js/component.js"></script>
+</body>
+</html>
