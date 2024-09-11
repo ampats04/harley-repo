@@ -1,0 +1,80 @@
+[
+    {
+      "id": "1",
+      "name": "LUCID J03",
+      "type": "Helmet",
+      "price": "$250",
+      "color" : "Matte Black",
+      "image": "/static/helmet-1-front.png",
+      "hoverImage": "/static/helmet-1-back.png"
+    },
+    {
+      "id": "2",
+      "name": "SUNLIGHT J03",
+      "type": "Helmet",
+      "color" : "White Pearl", 
+      "price": "$250",
+       "image": "/static/helmet-2-front.png",
+      "hoverImage": "/static/helmet-2-back.png"
+    },
+    {
+        "id": "3",
+        "name": "CYRUS",
+        "type": "Glove",
+        "color" : "Brown",
+        "price": "$200",
+         "image": "/static/gloves-1.png",
+        "hoverImage": ""
+      },
+      {
+        "id": "4",
+        "name": "WILLIE G",
+        "type": "Glove",
+        "color" : "Black",
+        "price": "$200",
+         "image": "/static/gloves-2.png",
+        "hoverImage": ""
+      },
+      {
+        "id": "5",
+        "name": "SWINGARM 3IN1",
+        "type": "Jacket",
+        "color" : "Black",
+        "price": "$500",
+         "image": "/static/jacket-1-front.png",
+        "hoverImage": "/static/jacket-1-back.png"
+      },
+      {
+        "id": "6",
+        "name": "TRENTON MESH",
+        "type": "Jacket",
+        "color" : "Black",
+        "price": "$500",
+         "image": "/static/jacket-2-front.png",
+        "hoverImage": "/static/jacket-2-back.png"
+      },
+      {
+        "id": "7",
+        "name": "PASSING LINK",
+        "type": "Vest",
+        "color" : "Black",
+        "price": "$85",
+         "image": "/static/vest-1-front.png",
+        "hoverImage": "/static/vest-1-back.png"
+      },
+
+      {
+        "id": "8",
+        "name": "TRADITION II",
+        "type": "Vest",
+        "color" : "Black",
+        "price": "$80",
+         "image": "/static/vest-2-front.png",
+        "hoverImage": "/static/vest-2-back.png"
+      }
+
+
+
+    
+  ]
+  
