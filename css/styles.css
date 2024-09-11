@@ -1,0 +1,832 @@
+
+html, body{
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#slider, #footer {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px; 
+}
+#header, #slider, #footer {
+    border-bottom: 1px, solid #ccc;
+}
+
+#footer {
+    border-top: 1px solid #ccc;
+}
+
+
+.parent-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-div-left {
+    background-color: #ffffff; 
+    border: 1px solid #ccc;   
+    padding-left:10px;        
+    display:flex;
+    align-items: center;    
+    flex-direction: row; 
+    justify-content: left;
+}
+
+#header-div-left h1 {
+    margin: 0;
+    padding: 10px;
+    font-family: 'Bebas Neue', sans-serif; 
+    font-size: auto;
+
+}
+
+#img-logo{
+    width: 80px;
+    height: 80px;
+    margin-right: auto;
+}
+
+.cart-h2{
+    font-size: 4em;
+    text-align: center;
+}
+
+.cart-h3{
+    font-size:2.3em;
+}
+
+#header-div-right{
+    background-color: #ffffff; 
+    border: 1px solid #ccc;   
+    padding-right:10px;        
+    display:flex;
+    align-items: center;    
+    flex-direction: column;
+    justify-content: center;
+}
+
+#header-div-right h4 {
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif; 
+    text-align: center;
+    font-size: 1em;
+
+}
+
+#img-cart{
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+    margin-left: auto;
+    position: relative;
+    display: flex;
+}
+
+
+
+#footer-div{
+    margin-top: auto;
+}
+
+#font-footer{
+    font-family: 'Bebas Neue', sans-serif; 
+    font-size: 1em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*
+slider designs
+*/
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  margin-top: 10px;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  border : 1.5px outset  #F6B800;
+
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* card start */
+/* Container for the product cards */
+#product {
+    display:flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 20px;
+    width:100%;
+}
+
+/* Styles for the product card */
+.product-card {
+    border: 2px solid #000; /* Bold border for a rugged look */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Strong shadow for depth */
+    overflow: hidden;
+    text-align: center;
+    /* background-color: #333; Dark background for a classic feel */
+    color: #f4f4f4; /* Light text color for contrast */
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    padding: 1em;
+    max-width: 20%; /* Limit the max width of the card */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+      
+
+.product-card:hover {
+    transform: scale(1.02);
+}
+
+/* Container for product images */
+.product-image-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Fixed width */
+    height: 100%; /* Fixed height */
+    margin: 0 auto;
+    text-wrap: wrap;
+}
+
+/* Styles for images */
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.main-image {
+    display: block;
+}
+
+.product-card h2, .product-card p {
+    font-family: 'Bebas Neue', sans-serif; /* Bold, modern font */
+    margin: 0;
+    padding: 0.5em; /* Adjust padding as needed */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    text-overflow: ellipsis; /* Clip text and add ellipsis (...) if it overflows */
+    overflow: hidden; /* Hide overflowed text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.product-card h2 {
+    font-size:2.5em; /* Larger font size for product name */
+    color: #ff5722; /* Harley Davidson orange */
+    text-transform: uppercase; /* Uppercase text for a strong look */
+    margin-bottom: 0.5em; /* Space below the title */
+}
+
+.product-card p {
+    font-size: 2.1em; /* Standard font size */
+    color: #000000; /* Light grey color for text */
+    text-align: center; /* Center align the text */
+}
+
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.checkout-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: 2px solid #ff5722; /* Border to match Harley Davidson orange */
+    border-radius: 5px;
+    background-color: transparent; /* Transparent background for a sleek look */
+    color: #ff5722; /* Text color to match border */
+    font-size: 2.3em; /* Standard font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #ff5722; /* Background color on hover */
+    color: #fff; /* Text color changes on hover */
+}
+
+
+.product-card:hover .main-image {
+    opacity: 0;
+}
+
+.product-card:hover .hover-image {
+    opacity: 1;
+}
+
+/* Disable hover effect if no hover image */
+.product-card.no-hover .main-image {
+    opacity: 1;
+}
+
+.product-card.no-hover .hover-image {
+    display: none;
+}
+
+/* Styles for the checkout button */
+.checkout-button {
+    margin-top: 10px;
+    padding: 8px 16px; /* Adjust padding for smaller buttons */
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size:1.5em; /* Smaller font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.checkout-button:hover {
+    background-color: #0056b3;
+}
+
+/* Larger screens - 1200px and up */
+@media screen and (max-width: 1200px) {
+    #product {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap to the next row */
+        justify-content: space-between; /* Space out the cards */
+        gap: 10px; /* Gap between the cards */
+    }
+
+    .product-card {
+        max-width: 300px; /* Limit card width */
+        margin-bottom: 23px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Strong shadow for depth */
+        overflow: hidden;
+        text-align: center;
+    }
+
+    #header-div-left h1 {
+        margin: 0;
+        padding: 10px;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 3em;
+    }
+    #cart-count{
+        top: 5px !important;
+        right: 59px !important;
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 23px !important;
+        line-height: 27px !important;
+        font-weight: bold !important;
+    }
+
+    .cart-h2{
+        font-size: 2.5em;
+        text-align: center;
+    }
+    .cart-modal-content {
+        background-color: #fefefe;
+        margin: 5% auto; 
+        padding: 20px;
+        border: 1px solid #888;
+        max-width: 70% !important; 
+        max-height: 90vh; 
+        border-radius: 8px; 
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow */
+        position: relative;
+        overflow-y: auto; 
+    }
+
+
+    .cart-p{
+        font-size: 1.5em;
+    }
+
+    .product-card h2, .product-card p {
+        margin: 0;
+        box-sizing: border-box;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .cart-h3{
+        font-size:2.3em;
+    }
+
+    .product-card h2 {
+        font-size: 2.3em;
+        color: #ff5722;
+        text-transform: uppercase;
+        margin-bottom: 0.5em;
+    }
+
+    .product-card p{
+        font-size: 2.1em;
+        color: #000000;
+        text-align: center;
+    }
+    
+    .checkout-button {
+        margin-top: 15px;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        font-size: 1.8em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-family: 'Bebas Neue', sans-serif;
+    }
+
+    #cart-count{
+        top: 1px !important;
+        right: 55px !important;
+        width: 33px !important;
+        height: 33px !important;
+        font-size: 23px !important;
+        line-height: 30px !important;
+        font-weight: bold !important;
+    }
+
+    .cart-item {
+        display: flex;
+       /* flex-direction: column;  Stack image and details vertically */
+        align-items: center; /* Align items to the start */
+        padding:10px;
+    }
+
+    .cart-item-image img {
+        width: 400px !important; /* Larger images for better visibility on small screens */
+        height: 400px !important;
+        margin-bottom: 10px;
+        border: #000 solid 1px;
+    }
+
+    .cart-item-details {
+        flex: 1; /* Allow details to take the remaining space */
+        text-align: center; /* Center align text */
+        font-size: 2.5em !important;
+    }
+    
+    .cart-item-details p {
+        margin: 0;
+    }
+
+    .cart-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Space between buttons */
+    }
+
+    .action-button {
+        justify-content: center;
+        margin: 0 auto; /* Center the button horizontally */
+        width: 40%; /* Make buttons full width */
+        font-size: 30px !important;
+        
+    }
+
+    .cart-h4{
+        font-size: 2em !important; 
+    }
+
+    .close {
+        font-size: 60px !important; /* Smaller close button on small screens */
+        top: -30px; /* Adjust top positioning for smaller screens */
+        right: 10px; /* Adjust right positioning for smaller screens */
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    
+    #product {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        
+    }
+
+    .cart-h3 {
+        font-size: 1.7em;
+    }
+
+    .cart-h2{
+        font-size: 1.7em
+    }
+    .product-card {
+        max-width: 150px;
+        max-height: auto;
+        flex: 1 1 100%;  /* 1 card per row */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Strong shadow for depth */
+        overflow: hidden;
+        text-align: center;
+    
+    }
+
+    #header-div-left h1{
+        font-family: 'Bebas Neue', sans-serif;
+        font-size:1.5em;
+    }
+
+    #img-cart{
+        height: 40px;
+        width: 40px;
+        margin-left: auto;
+    }
+
+    #img-logo{
+        height: 50px;
+        width: 50px;
+        margin-right: auto;
+
+    }
+
+    #slider{
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+        /* margin: 0 0px; */
+        background-color: #717171;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active {
+        background-color: #000000;
+      }
+
+      #img-slider{
+        width: 5px;
+        height: 250px;
+        justify-content: center;
+        
+    }
+    
+    .pagination-button {
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+    
+    .pagination-button.active {
+        background-color: #7E57AC; /* Highlight the active page */
+        color: white;
+    }
+    
+    .pagination-button:hover {
+        background-color: #ddd;
+    }
+
+    .cart-modal-content {
+        
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        max-width: auto;
+        max-height: 90vh;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow-y: auto;
+    }   
+
+    .cart-p{
+        font-size: 1.5em;
+
+    }
+
+    #cart-count{
+        top: 1px !important;
+        right: 40px !important;
+        width: 20px !important;
+        height: 20px !important;
+        font-size: 16px !important;
+        line-height: 20px !important;
+        font-weight: bold !important;
+    }
+    .cart-item {
+        display: flex;
+       /* flex-direction: column;  Stack image and details vertically */
+        align-items: center; /* Align items to the start */
+        padding:10px;
+    }
+
+    .cart-item-image img {
+        width: 160px !important; /* Larger images for better visibility on small screens */
+        height: 160px !important;
+        margin-bottom: 10px;
+        border: #000 solid 1px;
+    }
+
+    .cart-item-details {
+        flex: 1; /* Allow details to take the remaining space */
+        text-align: center; /* Center align text */
+        font-size: 1.3em !important;
+    }
+    
+    .cart-item-details p {
+        margin: 0;
+    }
+
+    .cart-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Space between buttons */
+    }
+
+    .action-button {
+        justify-content: center;
+        margin: 0 auto; /* Center the button horizontally */
+        width: 80%; /* Make buttons full width */
+        font-size: 16px;
+        
+    }
+
+    .cart-h4{
+        font-size: 1.5em !important; 
+    }
+
+    .close {
+        font-size: 30px !important; /* Smaller close button on small screens */
+        top: 5px; /* Adjust top positioning for smaller screens */
+        right: 5px; /* Adjust right positioning for smaller screens */
+    }
+
+    .product-card h2, .product-card p {
+        font-family: 'Bebas Neue', sans-serif;
+        margin: 0;
+      
+        box-sizing: border-box;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .product-card h2 {
+        font-size: 1.5em;
+        color: #ff5722;
+        text-transform: uppercase;
+        margin-bottom: 0.5em;
+    }
+
+    .product-card p{
+        font-size: 1.3em;
+        color: #000000;
+        text-align: center;
+    }
+    
+    .checkout-button{
+        font-size: 1.2em;
+    }
+}
+
+
+
+/* card ends */
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+#img-slider{
+    width: 100%;
+    justify-content: center;
+}
+
+/*
+
+end slider designs
+
+*/
+
+/* cart designs*/
+
+.cart-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width to cover the screen */
+    height: 100%; /* Full height to cover the screen */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.cart-modal-content {
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 70%; 
+    max-height: 90vh; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow */
+    position: relative;
+    overflow-y: auto; 
+    background-color: #fefefe;
+}
+
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.cart-p{
+    margin: 0;
+    font-size: 30px;
+    padding: 0.5em; /* Adjust padding as needed */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    text-overflow: ellipsis; /* Clip text and add ellipsis (...) if it overflows */
+    overflow: hidden; /* Hide overflowed text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+.cart-item-image img {
+    width: 500px; /* Set a fixed size for images */
+    height: 500px;
+    border-radius: 4px; /* Rounded corners for images */
+    margin-right: 10px;
+    margin-bottom: 15px;
+    border: #000 solid 1px;
+}
+
+.cart-item-details {
+    flex: 1; /* Allow details to take the remaining space */
+    text-align: center; /* Center align text */
+    font-size: 3em;
+    
+}
+
+.cart-item-details p {
+    margin: 0;
+}
+
+.cart-total {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.action-button {
+    background-color: #7E57AC; /* Color matching the theme */
+    color: white;
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    padding: 8px 12px; /* Smaller padding */
+    font-size: 14px; /* Smaller font size */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Bebas Neue', sans-serif; 
+}
+
+.action-button:hover {
+    background-color: #5e35b1; /* Darker shade on hover */
+}
+
+.close {
+    color: #aaa;
+    font-size: 46px;
+    font-weight: bold;
+    position: absolute; /* Position close button absolutely */
+    top: -5px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+#cart-container {
+    position: relative;
+    display: inline-block;
+    
+}
+
+
+#cart-count {
+    position: absolute;
+    top: 2px; /* Adjust the vertical position as needed */
+    right: 48px; /* Adjust the horizontal position as needed */
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 28px; /* Adjust size as needed */
+    height: 28px; /* Adjust size as needed */
+    text-align: center;
+    line-height: 30px; /* Center text vertically */
+    font-size: 20px; /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+.empty-cart-message {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+  
+}
+
+
+.cart-h4{
+    font-size: 2em; 
+}
+
+.action-button {
+    justify-content: center;
+    margin: 0 auto; /* Center the button horizontally */
+    width: 50%; /* Make buttons full width */
+    font-size: 30px;
+    
+}
+
+.cart-actions {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
+}
