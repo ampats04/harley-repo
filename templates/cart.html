@@ -1,0 +1,26 @@
+<!-- cart.html -->
+<html>
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <div id="cartItems">
+        <!-- Cart items will be displayed here -->
+    </div>
+
+    <script src="/js/cart.js"></script>
+    <script>
+        // Load cart items from localStorage
+        const cartItemsContainer = document.getElementById('cartItems');
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        cart.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('cart-item');
+            itemDiv.innerHTML = `<p>${item.name} - ${item.price}</p>`;
+            cartItemsContainer.appendChild(itemDiv);
+        });
+    </script>
+</body>
+</html>
